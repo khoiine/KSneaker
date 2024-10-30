@@ -1,0 +1,453 @@
+body{
+    margin:0;
+    padding:0;
+    position: relative;
+    padding-bottom: 2.5rem;
+    min-height: 110vh;
+    display: block;
+}
+html{
+    scroll-behavior: smooth;
+}
+#header{
+    height:110px;
+    text-align: center;
+    border-bottom: 1px solid #f5f5f5;
+}
+#wrapper{
+    max-width: 100%;
+    margin:0 auto;
+    justify-content: center;
+    text-align: center;
+    height: auto;
+    font-family: Arial, Helvetica, sans-serif;
+}
+/*top-page*/
+#logo img{
+    padding-top: 7px;
+}
+.slideshow-container {
+  position: relative;
+  margin: auto;
+}
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+#wp-content{
+    display:flex;
+    text-align: center;
+    position: sticky;
+    left: 0;
+    right: 0;
+    top:0;
+    height: 60px;
+    background: white;
+    box-shadow: rgb(224, 224, 224) 0px 1px 3px;
+    z-index: 2;
+}
+#menu{
+    flex-basis:50%;
+}
+#menu ul{
+    list-style: none;
+    display: flex;
+    text-transform: uppercase;
+    justify-content: space-between;
+    padding-left: 180px;
+}
+#menu ul li{
+    padding-top: 5px;
+    width: 150px;
+}
+#menu ul li a:hover{
+    box-shadow: 0px 0px 0px 10px orange;
+    background-color: orange;
+    border-radius: 20px;
+    color:white;
+    transition: 0.4s;
+    opacity: 0.8;
+}
+#menu ul li a{
+    text-decoration: none;
+    color:black;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 1000;
+}
+#search-bar{
+    text-align: right;
+    flex-basis:40%;
+    padding-top:10px;
+}
+#search-bar input{
+    background-color: #f3f3f3;
+    padding:10px;
+    width: 250px;
+    font-size: 16px ;
+    border: none;
+    border-radius: 17px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+::placeholder{
+    font-size: 16px;
+    color:black;
+}
+#search-bar img{
+    width:20px;
+}
+#search-bar img:hover{
+    opacity: 0.3;
+    transition: opacity 1s;
+}
+#cart{
+    flex-basis:10%;
+    padding-top:10px;
+}
+.wp-cart{
+    display: inline-block;
+    position: relative;
+}
+.cart-icon{
+    width:25px;
+    cursor: pointer;
+}
+.cart-icon:hover{
+    opacity: 0.3;
+    transition: opacity 1s;
+}
+.wp-cart:hover .cart-product-none{
+    display: block;
+}
+.cart-product-none{
+    border-radius: 5px;
+    box-shadow: 0 0px 10px rgb(123, 123, 123);
+    position: absolute;
+    width: 220px;
+    margin-top: 15px;
+    right:-30px;
+    display: none ;
+    z-index: 1;
+}
+/*menu*/
+#main-content{
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    display:flex;
+    height: auto;
+}
+#sidebar1, #sidebar2{
+    flex-basis: 10%;
+}
+#content-product{
+    text-transform: uppercase;
+    font-size: 20px;
+    flex-basis: 80%;
+}
+#product h1{
+    text-transform: uppercase;
+    font-size: 50px;
+    flex-basis: 80%;
+}
+hr{
+    border: 3px solid orange;
+    width: 100px;
+    border-radius: 20px;
+    position: relative;
+    top:-15px;
+}
+#product .container{
+    justify-content: space-between;
+}
+.container{
+    cursor: pointer;
+    text-align: left;
+    transition: 0.5s;
+    margin-top: 20px;
+    flex-wrap: wrap;
+    display: flex;
+}
+.container img{
+    width: 90%;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: 0.5s;
+}
+.filterDiv{
+    flex-basis: 25%;
+}
+.container img:hover{
+    filter: grayscale(0.5);
+    transform: scale(1.05);
+}
+.container h4{
+    color:orange;
+    position: relative;
+    top:-20px;
+}
+#page a{
+    background-color: black;
+    color: white;
+    text-transform:uppercase;
+    padding:15px;
+    font-size: 17px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+#page a:hover{
+    transition: 0.8s;
+    background-color: #f3f3f3;
+    color: black;
+    border: 0.5px solid black;
+}
+.hot .container{
+    justify-content: space-between;
+}
+.hot
+.button-best-seller{
+    text-align: right;
+}
+.button-best-seller button{
+    background-color: #d6d6d6;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+}
+.button-best-seller button:hover{
+    background-color: orange;
+    transition: 1s;
+}
+#best-seller1, #best-seller2{
+    animation: fadeinout 1.5s ;
+}
+@keyframes fadeinout {
+    10% { opacity: 0; }
+}
+.sale .container p{
+    background-color:#790033;
+    color: white;
+    width: 15%;
+    font-size: 15px;
+    font-weight: 600;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-align: center;
+    position: relative;
+    bottom: 85%;
+}
+#news .filterDiv{
+    flex-basis: 33%;
+}
+#news p{
+    text-align: left;
+    color:gray;
+    cursor: pointer;
+    width: 400px;
+}
+#news img{
+    width: 90%;
+}
+#contact-left{
+    flex-basis:50%;
+    text-align: left;
+    border-radius:5px;
+    background-color: #f3f3f3;
+}
+#contact-right{
+    flex-basis:50%;
+    text-align: left;
+    margin-left:20px;
+}
+#contact-right ul li{
+    list-style: none;
+}
+#contact-right ul input{
+    width: 800px;
+    height: 50px;
+    border:none;
+    box-shadow: 0px 0px 1px;
+    margin-top:20px;
+}
+#contact-right ul input::placeholder{
+    font-size: 15px;
+    color:gray;
+}
+#contact-right button{
+    border:none;
+    width: 150px;
+    height: 60px;
+    border-radius: 50px;
+    margin:40px;
+    background-color: orange;
+    color:white;
+    cursor: pointer;
+    font-size: 20px;
+}
+#contact-right button:active{
+    background-color: rgb(199, 131, 6);
+}
+#introduce{
+    display:flex;
+    margin-top:50px;
+}
+#big-logo{
+    flex-basis: 50%;
+    background-color: rgb(252, 181, 50);
+}
+#big-logo img{
+    margin-top: 35px;
+}
+#speech{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    padding-left: 30px;
+    padding-right: 50px;
+    background-color: #f5f5f5;
+    flex-basis: 50%;
+    font-size: 16px;
+    text-align: left;
+}
+#email{
+    justify-content:center;
+    background-color: #f5f5f5;
+    display: flex;
+    padding-bottom:10px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+#email p{
+    font-size: 16px;
+    padding-right: 15px;
+}
+#email input{
+    text-align: left;
+    margin-top:15px;
+    width: 600px;
+    height: 30px;
+}
+#type-email{
+    text-align: center;
+}
+#email button{
+    text-transform: uppercase;
+    width: 100px;
+    margin-top:15px;
+    margin-left: 10px;
+    height: 35px;
+    background: black;
+    color:white;
+    border:none;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+#email button:hover{
+    transition: 0.8s;
+    background-color: orange;
+    border: none;
+}
+#email button a{
+    text-decoration: none;
+    color:white;
+}
+/*footer*/
+#big-footer{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 2.5rem; 
+}
+#footer{
+    text-align: center;
+    border-top: 1px solid #f5f5f5;
+    display:flex;
+    text-transform: uppercase;
+    height: 220px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+#footer1{
+    padding-left: 35px;
+    flex-basis: 25%;
+    text-align: left;
+}
+#footer1 img{
+    width:200px;
+}
+#footer2{
+    flex-basis: 25%;
+    text-align: left;
+}
+#footer2 p{
+    font-size: 13px;
+    text-align: left;
+}
+#footer2 p:hover{
+    padding-left: 15px;
+    transition: 0.6s;
+    color:orange;
+    cursor: pointer;
+}
+#footer3{
+    text-align: left;
+    flex-basis: 25%;
+}
+#footer3 p{
+    font-size: 13px;
+    text-align: left;
+}
+#footer4{
+    text-align: left;
+    flex-basis: 25%;
+}
+#footer img{
+    padding:10px;
+}
+#footer-end{
+    height:60px;
+    border-top:1px solid #bcbab6;
+    background-color: black;
+}
+#footer-end h5{
+    color:white;
+    text-align: center;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.back-to-top{
+    border-radius: 100px;
+    width: 40px;
+    height: 40px;
+    box-shadow: 0px 0px 7px 0px;
+    position: fixed;
+    right:20px;
+    bottom: 29px;
+    z-index: 1;
+    background-color: white;
+    text-decoration: none;
+    color: black;
+}
+.back-to-top img{
+    width: 40%;
+    margin: 30%;
+}
+

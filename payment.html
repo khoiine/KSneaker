@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thanh toán</title>
+    <link rel="stylesheet" href="styleproduct.css">
+</head>
+<body style="background-image: url(img/giaybackground.jpg);">
+    <div class="payup">
+    <a href="menu.html"><img src="img/logo.png"></a> 
+    <div class="payup1">
+        <form action="menu.html">
+            <div class="guest-info">
+                <h3>Thông tin khách hàng</h3>
+                <input type="text" id="name" placeholder="Họ tên" required > <br><br>
+                <input type="email" id="emailaddress" placeholder="Email" required >
+                <input type="number" id="phonenumber" placeholder="SĐT" required > <br><br>
+                <input type="text" id="address" placeholder="Địa chỉ" required> <br><br>
+                <select name="" id="city" required>
+                    <option value="" style="display:none">Thành Phố</option>
+                    <option value="">Hồ Chí Minh</option>
+                </select>
+                <select name="" id="district" required>
+                    <option value="" style="display:none">Quận</option>
+                    <option value="">Quận 1</option>
+                    <option value="">Quận 2</option>
+                    <option value="">Quận 3</option>
+                    <option value="">Quận 4</option>
+                    <option value="">Quận 5</option>
+                    <option value="">Quận 6</option>
+                    <option value="">Quận 7</option>
+                    <option value="">Quận 8</option>
+                    <option value="">Quận 9</option>
+                    <option value="">Quận 10</option>
+                    <option value="">Quận 11</option>
+                    <option value="">Quận 12</option>
+                    <option value="">Bình Chánh</option>
+                    <option value="">Cần Giờ</option>
+                    <option value="">Củ Chi</option>
+                    <option value="">Hóc Môn</option>
+                    <option value="">Nhà Bè</option>
+                    <option value="">Bình Tân</option>
+                    <option value="">Bình Thạnh</option>
+                    <option value="">Gò Vấp</option>
+                    <option value="">Phú Nhuận</option>
+                    <option value="">Tân Bình</option>
+                    <option value="">Tân Phú</option>
+                    <option value="">Thủ Đức</option>
+                </select>
+                <select name="" id="ward" required>
+                    <option value="" style="display:none">Phường</option>
+                    <option value="">An Phú Đông</option>
+                </select>
+                </div>
+                <div class="payments">
+                <h3>Phương thức thanh toán</h3>
+                <input type="radio" name="pay" id="" required>Thanh toán bằng tiền mặt <br>
+                <input type="radio" name="pay" id="" required>Thanh toán qua thẻ ngân hàng <br><br>
+                </div>
+                <div class="pay-product">
+                    <div id="pay-product-img">
+                    <img src="product-img/nike1.jpg" alt="">
+                    </div>
+                    <div id="pay-product-name">
+                        <span>Air Jordan 1 High Retro OG - Taxi</span>
+                        <br>
+                        <span>Price: 174$</span>
+                    </div>
+                </div>
+                <hr>
+                <div id="payupbtn">
+                <a href="product-show-giaynike.html" onclick="bcd()">Trở về</a>
+                <button type="submit">Đặt hàng</button>
+                </div>
+        </form>
+</div>
+</div>
+    <div id="footer-end" style="position: absolute;bottom: 0;width: 100%;">
+        <h5>Copyright © 2023 KSneaker.</h5>
+    </div>
+    <script>
+        //alert đặt hàng thành công, quay lại trang menu
+        function abc(){
+            alert("Đặt hàng thành công");
+            window.location.href = "menu.html";
+                        }
+        //trở về
+        function bcd(){
+            confirm("Xác nhận quay lại?");
+        }
+</script>
+</div>
+</body>
+</html>
